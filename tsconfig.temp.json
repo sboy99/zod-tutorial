@@ -14,6 +14,6 @@
     "skipLibCheck": true
   },
   "include": [
-    "/media/lynx/04dacf10-7328-4304-a1f3-270e55c6f71d/Sagar/coding/typescript/zod-tutorial/src/06-default.problem.ts"
+    "/media/lynx/04dacf10-7328-4304-a1f3-270e55c6f71d/Sagar/coding/typescript/zod-tutorial/src/07-union.problem.ts"
   ]
 }
