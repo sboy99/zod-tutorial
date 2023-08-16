@@ -3,16 +3,18 @@
 import { z } from "zod";
 
 const StarWarsPerson = z.object({
-  name: z.string(),
+    name: z.string(),
 });
 
 const StarWarsPeopleResults = z.object({
-  results: z.array(StarWarsPerson),
+    results: z.array(StarWarsPerson),
 });
 
-const logStarWarsPeopleResults = (data: unknown) => {
-  //                                    ^ 🕵️‍♂️
-  data.results.map((person) => {
-    console.log(person.name);
-  });
+type TStarWarsPeopleResults = z.infer<typeof StarWarsPeopleResults>;
+
+const logStarWarsPeopleResults = (data: TStarWarsPeopleResults) => {
+    //                                    ^ 🕵️‍♂️
+    data.results.map((person) => {
+        console.log(person.name);
+    });
 };
